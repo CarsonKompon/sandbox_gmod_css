@@ -43,7 +43,7 @@ GmodInventoryBar
 
         &.active
         {
-            width: 160px;
+            width: 200px;
             transition: all 0.1s ease-out;
 
             GmodInventoryIcon
@@ -130,7 +130,7 @@ GmodInventoryBar
 
             .item-icon
             {
-                font-size: 64px;
+                font-size: 82px;
                 text-shadow: 0px 0px 10px rgba(#FFDD00, 1);
                 transition: all 0.1s ease-in-out;
                 opacity: 1;
