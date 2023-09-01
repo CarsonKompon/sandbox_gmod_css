@@ -1,0 +1,35 @@
+
+rootpanel currenttool
+{
+    left: 0px;
+    top: 32px;
+    height: 172px;
+    min-width: 400px;
+    padding: 16px 32px;
+
+    background-color: rgba(black, 0);
+    border-left: 0px;
+    background-image: linear-gradient(to right, rgba(black, 0.9), rgba(black, 0.75), rgba(black, 0.25), rgba(black, 0));
+
+    .title
+    {
+        font-family: Roboto;
+        font-weight: black;
+        text-transform: none;
+        font-size: 80px;
+        text-shadow: 2px 2px rgba(black, 0.5);
+        mix-blend-mode: normal;
+    }
+
+    .description
+    {
+        font-family: Roboto;
+        font-weight: black;
+        text-transform: none;
+        font-size: 24px;
+        opacity: 1;
+        text-shadow: 2px 2px rgba(black, 0.5);
+        mix-blend-mode: normal;
+    }
+
+}

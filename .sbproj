@@ -1,0 +1,27 @@
+{
+  "Title": "Sandbox Gmod CSS",
+  "Type": "addon",
+  "Org": "carsonk",
+  "Ident": "sandbox_gmod_css",
+  "Tags": "runtime entity",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "Resources": "*.sound\n*.scss\n*.ttf",
+  "MenuResources": null,
+  "HasCode": true,
+  "CodePath": "/code/",
+  "PackageReferences": [
+    "facepunch.sandbox"
+  ],
+  "EditorReferences": null,
+  "Metadata": {
+    "CsProjName": "",
+    "PrimaryAsset": "CarsonK.GmodCSSApplier",
+    "PhysicsMins": "-1,-1,-1",
+    "PhysicsMaxs": "1,1,1",
+    "RenderMins": "-1,-1,-1",
+    "RenderMaxs": "-1,-1,-1",
+    "ParentPackage": "facepunch.sandbox"
+  }
+}

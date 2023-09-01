@@ -1,0 +1,29 @@
+
+rootpanel health
+{
+    bottom: 32px;
+    left: 32px;
+    max-width: 250px;
+    height: 92px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-self: flex-end;
+    padding: 16px;
+    color: yellow;
+    background-color: rgba(black, 0.35);
+    border-radius: 4px;
+
+    .health-header
+    {
+        font-family: Tahoma;
+        font-weight: black;
+        font-size: 16px;
+        align-self: flex-end;
+    }
+
+    .value
+    {
+        font-family: halflife2;
+        font-size: 64px;
+    }
+}

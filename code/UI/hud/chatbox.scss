@@ -1,0 +1,126 @@
+rootpanel chat
+{
+    position: absolute;
+    bottom: 164px;
+    height: 300px;
+    font-family: Verdana;
+    background-color: rgba(rgb(160, 160, 160), 0);
+    border-radius: 8px;
+    gap: 8px;
+
+    .canvas
+    {
+        flex-grow: 1;
+        background-color: rgba(black, 0);
+        padding: 8px;
+        transition: all 0.1s ease;
+
+        chatrow
+        {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgba(black, 0);
+            transition: all 0.1s ease;
+            sound-in: "ui.gmod.chat.talk";
+
+            img
+            {
+                display: none;
+            }
+
+            .name
+            {
+                color: rgb(255, 255, 100);
+                text-shadow: 0px 2px black;
+            }
+
+            .msg
+            {
+                color: white;
+                text-shadow: 0px 2px black;
+            }
+
+            &.is-lobby, &.friend
+            {
+                .name
+                {
+                    color: rgb(185, 100, 255);
+                }
+            }
+
+            &.stale
+            {
+                transition: opacity 0.1s ease;
+            }
+        }
+    }
+
+    .textentry-container
+    {
+        flex-shrink: 0;
+
+        gap: 2px;
+        > *
+        {
+            background-color: rgba(black, 0.5);
+        }
+
+        .textentry-say
+        {
+            width: 44px;
+            opacity: 0;
+            font-size: 15px;
+            padding-left: 2px;
+        }
+
+        textentry
+        {
+            width: 0px;
+            flex-grow: 1;
+            min-height: 0px;
+            border-radius: 0px;
+            margin: 0px;
+            padding-left: 2px;
+            
+            label
+            {
+                font-family: Verdana;
+                margin: 0;
+                color: white;
+            }
+
+            .placeholder
+            {
+                opacity: 0;
+                padding: 0px;
+            }
+
+            .content-label
+            {
+                padding: 0px;
+            }
+        }
+    }
+
+    &.open
+    {
+        bottom: 164px;
+        background-image: none;
+        backdrop-filter-blur: 0px;
+        background-color: rgba(#6B6B6B, 0.5);
+        border-radius: 6px;
+
+        .canvas
+        {
+            background-color: rgba(black, 0.5);
+        }
+
+        .textentry-container
+        {
+            .textentry-say
+            {
+                opacity: 1;
+            }
+        }
+    }
+}

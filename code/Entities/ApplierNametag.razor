@@ -1,0 +1,39 @@
+@using System;
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.UI.Construct;
+
+@inherits WorldPanel;
+@attribute [StyleSheet]
+
+@namespace CarsonK
+
+<root class="nametag">
+	<p class="name">Press E to add/remove the UI style</p>
+</root>
+
+@code
+{
+
+	private GmodCSSApplier Following { get; set; }	
+
+	public ApplierNametag( GmodCSSApplier following )
+	{
+		Following = following;
+		PanelBounds = new Rect( -1000, -1000, 2000, 2000 );
+	}
+
+	[GameEvent.Client.Frame]
+	private void OnFrame()
+	{
+		if ( !Following.IsValid() ) return;
+
+		Style.Opacity = MathX.Clamp(1.25f - (Vector3.DistanceBetween( Camera.Position, Following.Position ) * 0.004f), 0f, 1f);
+
+		var height = Following.Model.RenderBounds.Size.z + 50f;
+
+		Position = Following.Position + Vector3.Up * height;
+		Rotation = Rotation.LookAt( -Screen.GetDirection( new Vector2( Screen.Width * 0.5f, Screen.Height * 0.5f ) ) );
+	}
+
+}
