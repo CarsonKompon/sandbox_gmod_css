@@ -96,6 +96,11 @@ public class GmodInventoryBar : Panel
 			slot.SetClass("hidden", slot.ChildrenCount == 0);
 		}
 
+		if(lastChange < 2f && (Input.Pressed("attack1") || Input.Pressed("attack2")))
+		{
+			lastChange = 2f;
+		}
+
 		SetClass("hidden", lastChange >= 2f);
 	}
 

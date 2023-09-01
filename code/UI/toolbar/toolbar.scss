@@ -149,6 +149,7 @@ GmodInventoryBar
     &.hidden
     {
         opacity: 0;
+        sound-in: ui.gmod.weapon.selected;
     }
 
 }
