@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices.ComTypes;
-using System.Reflection.PortableExecutable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +54,8 @@ public partial class GmodCSSApplier : ModelEntity, IUse
                 {
                     root.Delete(true);
                     _ = new SandboxHud();
+
+                    Sandbox.Services.Stats.Increment("times-removed", 1);
                     return;
                 }
             }
@@ -111,6 +111,6 @@ public partial class GmodCSSApplier : ModelEntity, IUse
             }
         }
 
-        Log.Info("gmod time");
+        Sandbox.Services.Stats.Increment("times-applied", 1);
     }
 }
