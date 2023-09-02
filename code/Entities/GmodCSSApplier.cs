@@ -50,7 +50,7 @@ public partial class GmodCSSApplier : ModelEntity, IUse
 
             foreach(var sheet in root.AllStyleSheets)
             {
-                if(sheet.FileName == "/ui/gmod.scss")
+                if(sheet.FileName == "/ui/gmod/gmod.scss")
                 {
                     root.Delete(true);
                     _ = new SandboxHud();
@@ -60,7 +60,7 @@ public partial class GmodCSSApplier : ModelEntity, IUse
                 }
             }
 
-            root.StyleSheet.Load("/ui/gmod.scss");
+            root.StyleSheet.Load("/ui/gmod/gmod.scss");
 
             for(int z=0; z<root.ChildrenCount; z++)
             {

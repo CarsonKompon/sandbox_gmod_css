@@ -1,14 +1,14 @@
 
 // HUD
-@import "/UI/hud/health.scss";
-@import "/UI/hud/currenttool.scss";
-@import "/UI/hud/chatbox.scss";
+@import "/UI/gmod/hud/health.scss";
+@import "/UI/gmod/hud/currenttool.scss";
+@import "/UI/gmod/hud/chatbox.scss";
 
 // Toolbar / Inventory Bar
-@import "/UI/toolbar/toolbar.scss";
+@import "/UI/gmod/toolbar/toolbar.scss";
 
 // Spawn Menu
-@import "/UI/spawnmenu/spawnmenu.scss";
+@import "/UI/gmod/spawnmenu/spawnmenu.scss";
 
 
 rootpanel .tooltip
