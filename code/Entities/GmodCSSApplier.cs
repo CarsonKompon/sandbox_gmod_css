@@ -83,14 +83,29 @@ public partial class GmodCSSApplier : ModelEntity, IUse
                                 entryPanel.AddChild(chatEntry);
                             }
                         }
-
+                        break;
+                    
+                    case "SpawnMenu":
+                        var newSpawnMenu = root.AddChild<GmodSpawnMenu>();
+                        root.SetChildIndex(newSpawnMenu, root.GetChildIndex(child));
+                        child.Delete(true);
                         break;
                     
                     case "InventoryBar":
                         var newInventoryBar = root.AddChild<GmodInventoryBar>();
                         root.SetChildIndex(newInventoryBar, root.GetChildIndex(child));
                         child.Delete(true);
-                        
+                        break;
+
+                    default:
+                        if(child.GetType().Name.Contains("Scoreboard"))
+                        {
+                            child.Add.Label(Game.Server.GameTitle, "scoreboard-header");
+                        }
+                        else
+                        {
+                            Log.Info("Unknown type: " + child.GetType().Name);
+                        }
                         break;
                 }
             }

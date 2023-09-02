@@ -62,7 +62,7 @@ public class GmodInventoryBar : Panel
 				}
 				if(!forced)
 				{
-					while(slotIndex < slots.Count - 1 && slots[slotIndex].ChildrenCount > 1)
+					while(slotIndex < slots.Count - 1 && slots[slotIndex].ChildrenCount > 2)
 					{
 						slotIndex++;
 					}
